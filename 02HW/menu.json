@@ -1,0 +1,52 @@
+{ "menu": {
+    "id": "my_menu",
+    "data": [
+      {
+        "href": "/",
+        "title": "Home"
+      },
+      {
+        "href": "/catalog",
+        "title": "Catalog"
+      },
+      {
+        "href": "/shop",
+        "title": "Shop",
+        "submenu": {
+          "id": "sub_shop",
+          "data": [
+            {
+              "href": "/shop/men",
+              "title": "Men"
+            },
+            {
+              "href": "/shop/women",
+              "title": "Women",
+              "submenu": {
+                "id": "sub_shop_women",
+                "data": [
+                  {
+                    "href": "/shop/women/dress",
+                    "title": "Women dress"
+                  },
+                  {
+                    "href": "/shop/women/coat",
+                    "title": "Women coat"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "href": "/gallery",
+        "title": "Gallery"
+      },
+      {
+        "href": "/contact",
+        "title": "Contacts"
+      }
+    ]
+  }
+}
