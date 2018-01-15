@@ -114,19 +114,6 @@ function removeMenu(menu) {
 }
 
 function prepareMenuItems(menuJSONData) {
-  // should generate menuItems = {0: m_item0, 1: m_item1, 2: m_item2, 3: m_item3, 4: m_item4}
-  // m_item = new MenuItem('/', 'Home')
-  // OR
-  // m_item = new SubMenu('submenu2', 'submenu-item', s_items, 'Women Sub')
-  // s_items = {0: s_item0, 1: s_item1}
-  // s_item0 = new MenuItem('/catalog/women/ss1', 'SS1')
-
-  console.log(menuJSONData);
-  // for (var item in menuJSONData) {
-  //   console.log('item = ', item, ' and data = ', menuJSONData[item], ' and submenu = ',
-  //               (typeof menuJSONData[item]['submenu'] === 'undefined'));
-  // }
-
   var menuItems = {};
   for (var item in menuJSONData) {
     if (typeof menuJSONData[item]['submenu'] === 'undefined') {
@@ -137,28 +124,6 @@ function prepareMenuItems(menuJSONData) {
                         menuJSONData[item]['title'], menuJSONData[item]['href']);
     }
   }
-
-
-  // var ss_item0 = new MenuItem('/catalog/women/ss1', 'SS1');
-  // var ss_item1 = new MenuItem('/catalog/women/ss2', 'SS2');
-  // var ss_items = {0: ss_item0, 1: ss_item1};
-  // var ssubmenu = new SubMenu('submenu2', 'submenu-item', ss_items, 'Women Sub');
-
-  // var s_item0 = new MenuItem('/catalog/men', 'Men');
-  // var s_item1 = ssubmenu;
-  // var s_items = {0: s_item0, 1: s_item1};
-  // var submenu = new SubMenu('submenu1', 'submenu-item', s_items, 'submenu1');
-
-  // var m_item0 = new MenuItem('/', 'Home');
-  // var m_item1 = new MenuItem('/catalog', 'Catalog');
-  // var m_item2 = submenu;
-  // var m_item3 = new MenuItem('/gallery', 'Gallery');
-  // var m_item4 = new MenuItem('/contacts', 'Contacts');
-
-  // var mItems = {0: m_item0, 1: m_item1, 2: m_item2, 3: m_item3, 4: m_item4};
-  // console.log(mItems);
-  console.log(menuItems);
-
   return menuItems;
 }
 
