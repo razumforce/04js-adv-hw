@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Advance - 1 - HAMBURGER</title>
+</head>
+<script type="text/javascript" src='hambuger.js'></script>
+<body>
+  <h1>Калькулятор Стоимости / Калорийности Гамбургера</h1>
+  
+  
+  <form id="form-burger" action="#" method="get">
+    <select size="1" name="burgerSize">
+      <option selected value="1">Small (50 rub / 20 cal)</option>
+      <option value="2">Big (100 rub / 40 cal)</option>
+    </select>
+
+    <div>
+      <input type="radio" id="stuffing1" name="burgerStuff" value="1" checked>
+      <label for="stuffing1">Cheese (+10 rub / +20 cal)</label>
+      <input type="radio" id="stuffing2" name="burgerStuff" value="2">
+      <label for="stuffing2">Salad (+20 rub / +5 cal)</label>
+      <input type="radio" id="stuffing3" name="burgerStuff" value="3">
+      <label for="stuffing3">Potato (+15 rub / +10 cal)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="topping1" name="burgerTopMayo" value="1">
+      <label for="topping1">Mayo (+20 rub / +5 cal)</label>
+      <input type="checkbox" id="topping2" name="burgerTopSpice" value="2">
+      <label for="topping2">Spice (+15 rub / +0 cal)</label>
+    </div>
+
+    <input type="submit" value="Calculate">
+  </form>
+  
+  <div id="div-result"></div>
+
+
+</body>
+</html>
