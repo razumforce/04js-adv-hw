@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TEST JS Advance - 4 - jQuery</title>
+  <style type="text/css">
+    .tab-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    
+    .tab {
+      width: 50px;
+      height: 20px;
+      margin-right: 5px;
+      background-color: lightblue;
+    }
+
+    .tab:hover {
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background-color: lightgreen;
+    }
+
+    .tab-content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .tab-content {
+      display: none;
+      width: 450px;
+      min-height: 100px;
+    }
+
+    .tab-content.active {
+      display: block;
+      background-color: lightgreen;
+    }
+
+  </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='script_jq.js'></script>
+<body>
+  <div class="tab-wrapper">
+    <div id="tab1" class="tab">TAB1</div>
+    <div id="tab2" class="tab active">TAB2</div>
+    <div id="tab3" class="tab">TAB3</div>
+  </div>
+  <div class="tab-content-wrapper">
+    <div id="tab1-content" class="tab-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus tempore hic temporibus cum, vel alias mollitia adipisci nobis molestiae, sunt enim accusamus quisquam sit impedit maiores sapiente, eaque nisi consequuntur, deserunt animi blanditiis. Perspiciatis, magni cumque explicabo esse ipsa exercitationem illum ut cum, recusandae commodi ullam corporis. Cumque consectetur, aperiam!</p></div>
+    <div id="tab2-content" class="tab-content active"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eligendi quas at, nihil, neque sequi nostrum maxime quo distinctio odio dolore eius molestias? Amet natus impedit perspiciatis, porro perferendis est, fuga sapiente reiciendis magnam dolore accusamus aspernatur vitae vel. Et consequatur aspernatur ea commodi nihil ipsa beatae, sequi officiis repudiandae.</p></div>
+    <div id="tab3-content" class="tab-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, ad repellat. Ab explicabo quasi unde sint, ad dolore perspiciatis sapiente possimus, repellat odit delectus rem, quia corporis culpa nesciunt incidunt quisquam accusamus nihil laudantium magni quibusdam sit! Culpa porro facilis, eveniet placeat eos velit accusamus, quaerat eaque cumque delectus sunt.</p></div>
+  </div>
+
+  
+
+
+</body>
+</html>
