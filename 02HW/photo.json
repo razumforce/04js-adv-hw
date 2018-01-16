@@ -1,0 +1,8 @@
+{
+  "type": "photo_url",
+  "photo": [
+    "./img/pic1.jpg",
+    "./img/pic2.jpg",
+    "./img/pic3.jpg"
+  ]
+}
