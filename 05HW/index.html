@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basket</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/Container.js"></script>
+    <script src="js/Basket.js"></script>
+    <script>
+        $(document).ready(function () {
+            var basket = new Basket('#basket_wrapper');
+
+            //
+            // ЭТОТ КОД НИЖЕ УБРАЛ, все реализовано при создании нового объекта Basket
+            // ТЕОРЕТИЧЕСКИ, при данной реализации может ведь быть, что разметка еще не сделана
+            // а Json подгрузился по AJAX??? и тогда куда он прицепит данные по корзине???
+            //
+
+            // basket.render('#basket_wrapper'); // создаем разметку для последующего вывода данных
+            // console.log(basket);
+
+            $('.buyme').on('click', function () {
+                var idProduct = parseInt($(this).attr('id').split('_')[1]);
+                var quantity = parseInt($(this).parent().find('.count').val()); // получаем количество из input
+                var price = parseInt($(this).parent().find('.product-price').text());
+
+                basket.add(idProduct, quantity, price);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="basket_wrapper"></div>
+<div><p>*********************</p></div>
+<div class="good">
+    <p>Товар с ID 123</p>
+    <p>Цена: <span class="product-price">300</span> руб.</p>
+    <label for="good_123_count">Количество</label>
+    <!--Добавил в разметку поле для указания количества-->
+    <input type="number" value="1" min="1" max="10" id="good_123_count" class="count">
+    <button class="buyme" id="good_123">Добавить в корзину</button>
+</div>
+<div class="good">
+    <p>Товар с ID 234</p>
+    <p>Цена: <span class="product-price">200</span> руб.</p>
+    <label for="good_234_count">Количество</label>
+    <!--Добавил в разметку поле для указания количества-->
+    <input type="number" value="1" min="1" max="10" id="good_234_count" class="count">
+    <button class="buyme" id="good_234">Добавить в корзину</button>
+</div>
+</body>
+</html>
