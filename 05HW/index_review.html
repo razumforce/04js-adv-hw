@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Review System</title>
+    <style>
+        #review {
+            font-weight: bold;
+        }
+        #review_comments {
+            font-weight: normal;
+        }
+        span[id^="commentDel"] {
+            cursor: crosshair;
+            font-weight: bold;
+            color: red;
+        }
+        span[id^="commentSub"] {
+            cursor: pointer;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/Container.js"></script>
+    <script src="js/Review.js"></script>
+    <script>
+        $(document).ready(function () {
+            var review = new Review('#review_wrapper');
+
+            $('#btn_addcomment').on('click', function() {
+                var commentText = $('#input_comment').val();
+                $('#input_comment').val('');
+                review.add(commentText);
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="review_wrapper"></div>
+    <div><hr></div>
+    <div class="add-comment">
+        <div>
+            <input id="input_comment" type="text" name="comment" style="width: 450px" placeholder="Write your comment here...">
+        </div>
+        <button id="btn_addcomment">Добавить комментарий</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "result": 1,
+  "lastId": 2,
+  "comments": [
+    {
+      "id_comment": 1,
+      "text": "This is my first comment",
+      "status": 1
+    },
+
+    {
+      "id_comment": 2,
+      "text": "This is my second comment",
+      "status": 0
+    }
+
+  ]
+}
