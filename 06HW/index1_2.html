@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TEST JS Advance - 6 - JQuery</title>
+  <link rel="stylesheet" type="text/css" href="jui/jquery-ui.min.css">
+  <style type="text/css">
+    * {
+      font-family: Arial;
+    }
+
+    body, html {
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+    }
+    
+    form {
+      background-color: #ccc;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    form input {
+      margin: 5px;
+      min-height: 30px;
+      font-size: 16px;
+      width: 95%;
+    }
+
+    .citywrapper {
+      position: relative;
+      font-family: inherit;
+    }
+
+    #autoCity {
+      position: absolute;
+      width: 90%;
+      min-height: 20px;
+      margin-left: 5px;
+      padding-left: 3px;
+      padding-top: 3px;
+      background-color: #fff;
+      color: #ccc;
+      display: none;
+    }
+    
+    #autoCity > span {
+      display: block;
+      cursor: default;
+    }
+
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="jui/jquery-ui.min.js"></script>
+  <script type="text/javascript" src='script1_2.js'></script>
+</head>
+
+<body>
+  <form id="form-submit" action="#" method="GET">
+    <div id="formDialog-message" title="Error in input">
+      <p>
+        <span class="ui-icon ui-icon-notice"></span>
+        Please check mistakes
+      </p>
+      <p>
+        After correctionpress submit button again
+      </p>
+    </div>
+    <input id="inputName" type="text" name="name" placeholder="Name">
+    <input type="text" id="inputDate" name="datebirth" placeholder="Date of birth">
+    <input id="inputTel" type="text" name="tel" placeholder="Telephone +7(000)000-0000">
+    <input id="inputEmail" type="text" name="email" placeholder="E-mail">
+    <div class="citywrapper">
+      <input id="inputCity" type="text" name="city" placeholder="City">
+      <div id="autoCity">
+      </div>
+    </div>
+    <input id="inputText" name="text" placeholder="Enter your text...">
+    <input type="submit" name="Send">
+  </form>
+
+
+</body>
+</html>
